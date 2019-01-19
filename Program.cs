@@ -24,7 +24,7 @@ namespace DotNetConsole
         {
             int[] numbers = new int[] {0, 1, 2, 3, 4, 5, 6, 7};
 
-            var numberQuery = from num in numbers where (num % 2 == 0) select num;
+            var numberQuery = numbers.Where(n => (n % 2 == 0)).ToArray();
 
             foreach (int number in numberQuery) {
                 Console.WriteLine($"{number} is divisible by 2");
